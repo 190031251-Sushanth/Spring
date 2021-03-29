@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="v1" class="springExample1.Car">
+
+	<property name="model" value="Nano"></property>
+</bean>
+
+<bean id="v2" class="springExample1.Bike">
+
+	<property name="model" value="Passion Plus"></property>
+</bean>
+
+<bean id="v3" class="springExample1.Bike">
+
+	<constructor-arg value="Pulsar R15"></constructor-arg>
+</bean>
+
+<bean id="v4" class="springExample1.Car">
+	<property name="model" value="Toofan"></property>
+	<property name="fuelType" ref="ft"></property>
+
+</bean>
+
+<bean id="ft" class="springExample1.Fuel">
+	<property name="fuelType" value="Petrol"></property>
+</bean>
+
+<bean id="vehicle" class="springExample1.Bike">
+	<property name="model" value="TVS-Jupiter"></property>
+	<property name="fuelType" ref="ft"></property>
+	<property name="price" ref="pr"></property>
+
+</bean>
+
+
+<bean id="pr" class="springExample1.Price">
+
+	<property name="price" value="50000"></property>
+
+</bean>
+
+</beans>
